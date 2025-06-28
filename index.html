@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كلو عالصاج</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🫓</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="scent-trail"></div>
+
+    <div id="preloader">
+        <div class="croissant-loader">
+            <div class="croissant-piece"></div>
+            <div class="croissant-piece"></div>
+            <div class="croissant-piece"></div>
+            <div class="croissant-piece"></div>
+            <div class="croissant-piece"></div>
+            <div class="croissant-piece"></div>
+            <div class="croissant-piece"></div>
+        </div>
+        <p class="loading-text">جاري تحضير طلبك ...</p>
+    </div>
+
+    <div class="container">
+
+        <div class="logo-container reveal"><img src="images/logo.JPG" alt="كلو عالصاج لوغو"></div>
+
+        <header>
+            <h1 class="bakery-title">كلو عالصاج</h1>
+            <div class="working-hours-container reveal reveal-delayed">
+                <p class="working-hours">ساعات العمل: من 7:00 صباحًا حتى 12:00 ظهرًا</p>
+            </div>
+        </header>
+        
+        <section class="menu-selection reveal reveal-delayed">
+            <!-- EDITED: More engaging button text -->
+            <a href="food.pdf" class="menu-btn" target="_blank">📜 تصفح قائمة الصاج</a>
+            <a href="juice.pdf" class="menu-btn" target="_blank">🍹 اكتشف مشروباتنا</a>
+        </section>
+
+        <section class="about-us reveal">
+            <h2 class="section-title">لماذا تختارنا؟</h2>
+            <div class="values-container">
+                <div class="value-card">
+                    <div class="value-card-inner">
+                        <div class="value-card-front">
+                            <div class="value-icon">🌾</div>
+                            <h3>أجود المكونات</h3>
+                            <p>نختار مكوناتنا بعناية فائقة لنضمن لكم طعماً طازجاً ونكهة لا تُنسى في كل قضمة.</p>
+                        </div>
+                        <div class="value-card-back">
+                            <div class="value-icon">🍞</div>
+                            <h3>طازج وشهي</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="value-card">
+                    <div class="value-card-inner">
+                        <div class="value-card-front">
+                            <div class="value-icon">👨‍🍳</div>
+                            <h3>خبازون محترفون</h3>
+                            <p>فريقنا من الخبازين يمتلك الخبرة والشغف لتقديم معجنات ومناقيش مُعدّة بإتقان وحب.</p>
+                        </div>
+                        <div class="value-card-back">
+                            <div class="value-icon">❤️</div>
+                            <h3>صنع بحب</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="value-card">
+                    <div class="value-card-inner">
+                        <div class="value-card-front">
+                            <div class="value-icon">✨</div>
+                            <h3>نظافة فائقة</h3>
+                            <p>نلتزم بأعلى معايير النظافة والتعقيم في كل مراحل التحضير، لأن صحتكم هي أولويتنا.</p>
+                        </div>
+                        <div class="value-card-back">
+                            <div class="value-icon">🧼</div>
+                            <h3>آمن ونظيف</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="doodle-divider reveal"><svg viewBox="0 0 200 10"><path d="M 0,5 C 50,10 150,0 200,5" stroke-width="2" fill="none"/></svg></div>
+
+        <section class="featured-item reveal">
+            <div class="featured-image"><img src="images/1.jpg" alt="صورة منقوشة شهية"></div>
+            <div class="featured-text">
+                <!-- EDITED: More suitable heading -->
+                <h3> الأشهر والأشهى!</h3>
+                <p>دلل نفسك مع منقوشة الجبن الذائبة على الصاج، والمُعدّة من عجينتنا الخاصة والمخبوزة أمامك مباشرة لتصلك ساخنة وشهية. تجربة تستحق أن تعيشها!</p>
+            </div>
+        </section>
+
+        <div class="doodle-divider reveal"><svg viewBox="0 0 200 10"><path d="M 0,5 C 50,0 150,10 200,5" stroke-width="2" fill="none"/></svg></div>
+        
+        <section class="gallery-container reveal reveal-delayed">
+            <div class="gallery-slide"><img src="images/1.jpg" alt="Freshly baked goods"></div>
+            <div class="gallery-slide"><img src="images/2.jpg" alt="A selection of our delicious products"></div>
+            <div class="gallery-slide"><img src="images/3.jpg" loading="lazy" decoding="async" alt="Artisanal bread"></div>
+        </section>
+
+        <footer class="reveal">
+            <!-- EDITED: Social links removed for a cleaner look -->
+            <p>© <span id="current-year"></span> كلو عالصاج - جميع الحقوق محفوظة</p>
+        </footer>
+    </div>
+
+    <!-- === NEW: Croissant to Top Button === -->
+    <div class="croissant-to-top" role="button" aria-label="العودة للأعلى"></div>
+
+    <script>
+        window.addEventListener('load', () => { document.getElementById('preloader').style.display = 'none'; });
+        
+        const menuButtons = document.querySelectorAll('.menu-btn');
+        const mainContainer = document.querySelector('.container');
+        menuButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const destination = this.href;
+                mainContainer.classList.add('is-flipping');
+                setTimeout(() => {
+                    window.open(destination, '_blank');
+                    mainContainer.classList.remove('is-flipping');
+                }, 800);
+            });
+        });
+        
+        let slideIndex = 0;
+        showSlides();
+        function showSlides() {
+            let i, slides = document.getElementsByClassName("gallery-slide");
+            for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 5000);
+        }
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('visible'); } });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+        
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // === NEW: Croissant to Top Logic ===
+        const croissantToTopButton = document.querySelector(".croissant-to-top");
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                croissantToTopButton.classList.add("visible");
+            } else {
+                croissantToTopButton.classList.remove("visible");
+            }
+        });
+        croissantToTopButton.addEventListener("click", e => {
+            e.preventDefault();
+            croissantToTopButton.classList.add("rolling");
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            setTimeout(() => {
+                croissantToTopButton.classList.remove("rolling");
+            }, 1000); // Remove class after animation
+        });
+    </script>
+</body>
+</html>

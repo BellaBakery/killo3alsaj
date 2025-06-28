@@ -1,0 +1,167 @@
+/* --- THEME COLORS --- */
+:root {
+    --bg-color: #eaddc2;
+    --dark-brown: #3d2b1f;
+    --medium-brown: #a57c52;
+    --light-cream: #f8f1e6;
+    --ember-glow: #ff8c00;
+    --shadow-color: rgba(61, 43, 31, 0.2);
+}
+
+/* Reset & General Styles */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    background-color: var(--bg-color); color: var(--dark-brown);
+    font-family: 'Cairo', sans-serif; text-align: center;
+    background-image: url('https://www.transparenttextures.com/patterns/old-paper.png');
+    overflow-x: hidden; perspective: 1000px;
+    animation: heat-haze 15s ease-in-out infinite alternate;
+}
+@keyframes heat-haze {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+.container {
+    max-width: 900px; margin: 0 auto; padding: 20px 15px;
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.8s ease;
+    transform-style: preserve-3d;
+}
+.container.is-flipping { transform: rotateY(-180deg) scale(0.9); opacity: 0; }
+#preloader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: var(--bg-color); z-index: 9999; display: flex; justify-content: center; align-items: center; }
+#preloader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: var(--bg-color); z-index: 9999; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.croissant-loader { height: 100px; width: 110px; position: relative; transform: rotate(15deg); }
+.croissant-piece { width: 20px; height: 20px; background: var(--dark-brown); border-radius: 10px 0; position: absolute; animation: piece-animation 1.5s infinite; }
+.croissant-piece:nth-child(1) { top: 0; left: 45px; animation-delay: 0.1s; }
+.croissant-piece:nth-child(2) { top: 15px; left: 25px; animation-delay: 0.2s; }
+.croissant-piece:nth-child(3) { top: 35px; left: 15px; animation-delay: 0.3s; }
+.croissant-piece:nth-child(4) { top: 55px; left: 25px; animation-delay: 0.4s; }
+.croissant-piece:nth-child(5) { top: 70px; left: 45px; animation-delay: 0.5s; }
+.croissant-piece:nth-child(6) { top: 55px; left: 65px; animation-delay: 0.6s; }
+.croissant-piece:nth-child(7) { top: 35px; left: 75px; animation-delay: 0.7s; }
+@keyframes piece-animation { 0%, 100% { transform: translateY(0) scale(1); opacity: 1; } 50% { transform: translateY(15px) scale(0.9); opacity: 0.8; } }
+.loading-text { margin-top: 20px; font-size: 1.2rem; font-weight: 700; color: var(--dark-brown); animation: text-pulse 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+@keyframes text-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+.logo-container { padding: 10px 0 20px; }
+.logo-container img { max-width: 180px; width: 60%; height: auto; }
+header { margin-bottom: 25px; }
+.bakery-title {
+    font-weight: 900; font-size: clamp(3rem, 12vw, 5rem);
+    line-height: 1.2; margin-bottom: 15px;
+    background: linear-gradient(to right, var(--dark-brown) 20%, var(--ember-glow) 40%, var(--light-cream) 50%, var(--ember-glow) 60%, var(--dark-brown) 80%);
+    background-size: 200% auto;
+    color: transparent; background-clip: text; -webkit-background-clip: text;
+    animation: shimmer 3.5s linear infinite;
+    padding-bottom: 10px;
+}
+@keyframes shimmer { to { background-position: -200% center; } }
+.working-hours { font-size: clamp(1rem, 3vw, 1.2rem); color: var(--light-cream); background-color: var(--dark-brown); padding: 10px 20px; border-radius: 8px; display: inline-block; font-weight: 700; box-shadow: 0 4px 8px var(--shadow-color); }
+.menu-selection { margin: 40px 0; display: flex; flex-direction: column; align-items: center; gap: 20px; }
+.menu-btn {
+    display: flex; align-items: center; justify-content: center;
+    width: 90%; max-width: 450px; padding: 18px 15px; font-size: clamp(1rem, 4vw, 1.2rem);
+    white-space: nowrap; background-color: var(--dark-brown);
+    color: var(--light-cream); text-decoration: none; border-radius: 12px;
+    font-weight: 700; transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid var(--dark-brown); box-shadow: 0 5px 15px var(--shadow-color);
+}
+.menu-btn:hover { transform: translateY(-5px); box-shadow: 0 8px 25px var(--shadow-color), 0 0 15px var(--ember-glow); }
+.menu-btn:active { transform: translateY(0px); }
+
+/* --- Content Sections --- */
+.section-title { font-size: clamp(1.8rem, 5vw, 2.2rem); font-weight: 900; margin-bottom: 30px; color: var(--dark-brown); }
+.about-us, .featured-item { padding: 40px 0; }
+.values-container { display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; }
+.value-card {
+    background-color: rgba(255, 255, 255, 0.4); padding: 25px; border-radius: 15px;
+    width: 250px; box-shadow: 0 4px 15px var(--shadow-color);
+    border: 1px solid rgba(0, 0, 0, 0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.value-card:hover { transform: translateY(-10px); box-shadow: 0 8px 25px var(--shadow-color); }
+.value-icon {
+    font-size: 3rem; line-height: 1; margin-bottom: 15px;
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* EDITED: Bouncy transition */
+}
+/* === SURPRISE: Playful hover effect on icons === */
+.value-card:hover .value-icon { transform: rotate(5deg) scale(1.1); }
+.value-card h3 { font-size: 1.4rem; margin-bottom: 10px; color: var(--dark-brown); }
+.value-card p { font-size: 1rem; line-height: 1.6; color: var(--medium-brown); }
+.doodle-divider { width: 150px; margin: 20px auto; stroke: var(--medium-brown); opacity: 0.6; }
+.featured-item { display: flex; align-items: center; gap: 30px; background-color: rgba(255, 255, 255, 0.4); padding: 30px; border-radius: 15px; }
+.featured-image img { width: 200px; height: 200px; object-fit: cover; border-radius: 15px; box-shadow: 0 5px 15px var(--shadow-color); }
+.featured-text { text-align: right; }
+.featured-text h3 { font-size: 2rem; font-weight: 900; margin-bottom: 15px; color: var(--dark-brown); }
+.featured-text p { font-size: 1.1rem; line-height: 1.7; color: var(--medium-brown); }
+
+/* --- Image Gallery --- */
+.gallery-container { position: relative; max-width: 600px; margin: 20px auto; border-radius: 15px; overflow: hidden; box-shadow: 0px 8px 20px var(--shadow-color); border: 3px solid white; }
+.gallery-slide { display: none; animation: ken-burns-fade 5s infinite; }
+.gallery-slide img { width: 100%; vertical-align: middle; }
+@keyframes ken-burns-fade { 0% { opacity: 0; transform: scale(1.05) rotate(1deg); } 20% { opacity: 1; } 80% { opacity: 1; } 100% { opacity: 0; transform: scale(1) rotate(-1deg); } }
+
+/* --- Animate on Scroll --- */
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+.reveal.reveal-delayed { transition-delay: 0.15s; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* --- Footer --- */
+footer { margin-top: 40px; padding: 20px; border-top: 2px solid var(--medium-brown); font-weight: bold; color: var(--medium-brown); }
+/* EDITED: Social links styles removed */
+
+/* === NEW: Croissant to Top Button === */
+.croissant-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+}
+.croissant-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.croissant-to-top::before {
+    content: '🥐';
+    font-size: 2.5rem;
+    line-height: 50px;
+    text-align: center;
+    display: block;
+    transition: transform 0.3s ease;
+}
+.croissant-to-top:hover::before {
+    transform: scale(1.15) rotate(-10deg);
+}
+.croissant-to-top.rolling::before {
+    animation: roll-up 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
+}
+@keyframes roll-up {
+    0% { transform: rotate(0deg) scale(1); }
+    100% { transform: rotate(-360deg) scale(0.8); }
+}
+
+
+
+/* --- Responsiveness --- */
+@media (max-width: 850px) {
+    .values-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .value-card {
+        width: 90%;
+        max-width: 400px; /* Ensure cards don't get too wide */
+    }
+    .featured-item { flex-direction: column; text-align: center; }
+    .featured-text { text-align: center; }
+}
+@media (min-width: 600px) {
+    .menu-selection { flex-direction: row; justify-content: center; gap: 25px; }
+    .menu-btn { width: auto; padding: 20px 40px; }
+}
